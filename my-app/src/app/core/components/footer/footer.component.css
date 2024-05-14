@@ -1,0 +1,31 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+}
+
+.left{
+    margin-left: 20%;
+}
+
+.vertical-line{
+    border-left: 4px solid darkslateblue;
+    height: 80%;
+    position: absolute;
+    left: 50%;
+}
+
+.right{
+    margin-left: 40%;
+
+}
+
+.autentia{
+    width: 40%;
+    margin-top: 3%;
+    height: auto;
+}

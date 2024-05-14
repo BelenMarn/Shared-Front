@@ -1,0 +1,33 @@
+.menu{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.description{
+    margin-top: 12%;
+    margin-left: 20%;
+    margin-bottom: 2%;
+    text-align: justify;
+}
+
+.options {
+    margin-left: 21%;
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.friend,
+.expense,
+.balance {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+img {
+    margin-left: 10px;
+    width: 15%;
+}
