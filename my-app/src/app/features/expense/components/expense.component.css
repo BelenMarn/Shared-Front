@@ -1,0 +1,59 @@
+.container {
+	align-items: center;
+  padding-top: 2%;
+	margin-left: 35%;
+  margin-bottom: 5%;
+  width: 30%;
+
+}
+
+select {
+    appearance: none;
+    width: 100%;
+    padding: 1rem 4rem 1rem 1rem;
+    color: white;
+    background-color: darkslateblue;
+    border-radius: 0.25em;
+    box-shadow: 0 0 20px darkgray;
+    cursor: pointer;
+}
+
+.data{
+    margin-top: 2%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.description, .amount{
+  width: 95%;
+  padding: 2%;
+  margin-top: 2%;
+}
+
+.description{
+  resize: none;
+}
+
+
+button{
+  text-align: center;
+  width: 40%;
+  margin-top: 4%;
+  font-weight: bold;
+  color: darkslateblue;
+  background: #dbcdf0;
+  box-shadow: 0 0 20px lightgray;
+  border-radius: 0.25em;
+  border: 0;
+  padding: 2%;
+}
+
+
+
+  
+  
+
+
+  
