@@ -6,20 +6,8 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>Miembro 1</td>
-			</tr>
-            <tr>
-				<td>Miembro 2</td>
-			</tr>
-            <tr>
-				<td>Miembro 3</td>
-			</tr>
-            <tr>
-				<td>Miembro 4</td>
-			</tr>
-            <tr>
-				<td>Miembro 5</td>
+			<tr *ngFor="let friend of friends">
+				<td>{{ friend.name }}</td>
 			</tr>
 		</tbody>
 	</table>
