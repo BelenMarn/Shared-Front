@@ -11,4 +11,11 @@
 			</tr>
 		</tbody>
 	</table>
+
+	<div class="bottom">
+		<button class="setVisibilityTrue" (click)="showInputMethod()">+</button>
+		<p>Añadir Amigo</p>
+		<input type="text" [(ngModel)]="inputName" [hidden]="!showInputName" placeholder="Nombre">
+		<button class="add" (click)="addFriend()" [hidden]="!showInputAdd">Añadir</button>
+	</div>
 </div>

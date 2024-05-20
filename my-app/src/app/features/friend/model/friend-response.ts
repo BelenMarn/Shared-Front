@@ -1,4 +1,4 @@
 export interface FriendResponse {
   idFriend: number;
-    name: string;
-  }
+  name: string;
+}

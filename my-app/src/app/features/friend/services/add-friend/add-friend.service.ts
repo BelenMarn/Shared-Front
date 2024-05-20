@@ -1,17 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
-import { FriendResponse } from '../model/friend-response';
+import { FriendRequest } from '../../model/friend-request';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ShowFriendsService {
+export class AddFriendService {
   private baseUrl = '/rest/friend';
 
   constructor(private http: HttpClient) { }
 
-  getAllFriends(): Observable<FriendResponse[]> {
-    return this.http.get<FriendResponse[]>(this.baseUrl).pipe(tap(console.log));
+  addFriend(friend: FriendRequest): Observable<any> {
+    return this.http.post<any>(this.baseUrl, friend);
   }
 }

@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FriendResponse } from '../../../friend/model/friend-response';
-import { ShowFriendsService } from '../../../friend/services/show-friends.service';
+import { ShowFriendsService } from '../../../friend/services/show-friends/show-friends.service';
 import { CommonModule } from '@angular/common';
 import { ExpenseService } from '../../services/add-expense/add-expense.service';
 import { FormsModule } from '@angular/forms';

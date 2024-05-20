@@ -11,7 +11,7 @@ body {
 	align-items: center;
     padding-top: 3%;
 	margin-left: 29%;
-	margin-bottom: 3%;
+	margin-bottom: 2%;
 }
 
 table {
@@ -38,3 +38,46 @@ td {
 	color: darkslateblue;
 }
 
+.bottom {
+	display: flex;
+	align-items: center;
+  }
+
+.setVisibilityTrue {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: darkslateblue;
+	color: white;
+	font-size: 20px;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  .setVisibilityTrue:hover {
+	background-color: darkgray;
+  }
+
+  p,
+  .add{
+	margin-left: 1%;
+  }
+
+  input{
+	margin-left: 22%;
+  }
+
+  .add{
+	text-align: center;
+	color: darkslateblue;
+	background: #dbcdf0;
+	box-shadow: 0 0 20px lightgray;
+	border-radius: 0.25em;
+	border: 0;
+	padding: 0.5%;
+  }
+  
+  .add:hover {
+	  background-color: #c8afed;
+	}
