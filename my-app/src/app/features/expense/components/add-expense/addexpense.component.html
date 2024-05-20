@@ -1,0 +1,14 @@
+<div class="container">
+
+  <select #friendSelect (change)="onChangeFriend(friendSelect.value)">
+    <option selected value="">SELECCIONA UN MIEMBRO</option>
+    <option *ngFor="let friend of friends" [value]="friend.idFriend">{{ friend.name }}</option>
+ </select>
+
+  <div class="data">
+    <textarea #descrip class="description" placeholder="Descripción del gasto" rows="8" [(ngModel)]="description"></textarea>
+    <input type="text" class="amount" placeholder="Cantidad €" [(ngModel)]="amount">
+  </div>
+
+  <button type="button" class="send" (click)="onSubmit()">Aceptar</button>
+</div>

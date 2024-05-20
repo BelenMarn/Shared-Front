@@ -1,3 +1,8 @@
+*{
+    font-family: open-sans;
+    font-size: 15px;
+  }
+
 .menu{
     margin-left: 10%;
     margin-right: 10%;
@@ -20,7 +25,7 @@
 }
 
 .friend,
-.expense,
+.addexpense,
 .balance {
     display: flex;
     align-items: center;

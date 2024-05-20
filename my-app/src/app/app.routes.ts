@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { FriendComponent } from './features/friend/components/friend.component'; 
-import { ExpenseComponent } from './features/expense/components/expense.component'; 
+import { AddExpenseComponent } from './features/expense/components/add-expense/addexpense.component'; 
 import { BalanceComponent } from './features/balance/components/balance.component'; 
 
  export const routeConfig: Routes = [
@@ -11,9 +11,9 @@ import { BalanceComponent } from './features/balance/components/balance.componen
 
     },
     {
-        path: 'expense',
-        component: ExpenseComponent,
-        title: 'Expense page'
+        path: 'addexpense',
+        component: AddExpenseComponent,
+        title: 'Add Expense page'
 
     },
     {

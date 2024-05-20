@@ -1,3 +1,8 @@
+*{
+    font-family: open-sans;
+    font-size: 15px;
+  }
+
 .footer {
     position: absolute;
     bottom: 0;
