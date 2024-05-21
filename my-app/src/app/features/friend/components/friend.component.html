@@ -1,3 +1,7 @@
+<head>
+	<link rel="stylesheet" href="friend.mediaqueries.css">
+  </head>
+
 <div class="container">
 	<table>
 		<thead>
@@ -13,9 +17,14 @@
 	</table>
 
 	<div class="bottom">
-		<button class="setVisibilityTrue" (click)="showInputMethod()">+</button>
-		<p>Añadir Amigo</p>
-		<input type="text" [(ngModel)]="inputName" [hidden]="!showInputName" placeholder="Nombre">
-		<button class="add" (click)="addFriend()" [hidden]="!showInputAdd">Añadir</button>
+		<div class="left">
+			<button class="setVisibilityTrue" (click)="showInputMethod()">+</button>
+			<p>Añadir Amigo</p>
+		</div>
+
+		<div class="right">
+			<input type="text" [(ngModel)]="inputName" [hidden]="!showInputName" placeholder="Nombre">
+			<button class="add" (click)="addFriend()" [hidden]="!showInputAdd">Añadir</button>
+		</div>
 	</div>
 </div>

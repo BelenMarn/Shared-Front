@@ -1,0 +1,21 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--color-white);
+}
+
+.header{
+    height: 88px;
+}
+
+.center{
+    flex-grow: 1;/*Le dices al componente que crezca todo lo posible*/
+}
+
+.footer{
+    height: 120px;
+}
+
+
+

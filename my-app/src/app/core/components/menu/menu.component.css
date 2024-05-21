@@ -1,39 +1,40 @@
-*{
-    font-family: open-sans;
-    font-size: 15px;
-  }
+:host{
+    height: 20%;
+    width: 90%;
+}
 
 .menu{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: auto;
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;;
 }
 
 .description{
-    margin-top: 12%;
-    margin-left: 20%;
-    margin-bottom: 2%;
     text-align: justify;
 }
 
 .options {
-    margin-left: 18%;
-    width: 70%;
+    margin-top: 3vh;
+    width: 60%;
     height: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
 
 }
 
-.friend,
-.addexpense,
-.balance ,
-.viewexpense{
+.friend, .addexpense, .balance, .viewexpense{
     display: flex;
     align-items: center;
-    width: 100%;
+    width: inherit;
+    gap: 0.5rem;
 }
 
 img {
-    margin-left: 10px;
-    width: 15%;
+    width: 5vh;
 }

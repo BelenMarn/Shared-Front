@@ -1,14 +1,15 @@
-*{
-  font-family: open-sans;
-  font-size: 15px;
+:host{
+  height: 70%;
+  width: 40%;
 }
 
 .container {
-	align-items: center;
-  padding-top: 1%;
-	margin-left: 35%;
-  margin-bottom: 5%;
-  width: 30%;
+  height: inherit;
+  width: inherit;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 2vh;
 
 }
 
@@ -16,15 +17,15 @@ select {
     appearance: none;
     width: 100%;
     padding: 1rem 4rem 1rem 1rem;
-    color: white;
-    background-color: darkslateblue;
+    color: var(--color-white);
+    background-color: var(--color-dark-blue);
     border-radius: 0.25em;
-    box-shadow: 0 0 20px darkgray;
-    cursor: pointer;
+    box-shadow: 0 0 20px var(--color-dark-gray);
+    cursor: pointer;s
 }
 
 .data{
-    margin-top: 2%;
+    margin-top: 1vh;
     display: block;
     align-items: center;
     justify-content: center;
@@ -32,9 +33,9 @@ select {
 }
 
 .description, .amount{
-  width: 95%;
-  padding: 2%;
-  margin-top: 2%;
+  width: 100%;
+  padding: 1vh;
+  margin-top: 1vh;
 }
 
 .description{
@@ -44,17 +45,17 @@ select {
 
 button{
   text-align: center;
-  width: 40%;
-  margin-top: 4%;
+  width: 6rem;
+  margin-top: 2vh;
   font-weight: bold;
-  color: darkslateblue;
-  background: #dbcdf0;
-  box-shadow: 0 0 20px lightgray;
+  color: var(--color-dark-blue);
+  background: var(--color-light-lilac);
+  box-shadow: 0 0 20px var(--color-light-gray);
   border-radius: 0.25em;
   border: 0;
   padding: 2%;
 }
 
 button:hover {
-	background-color: #c8afed;
+	background-color: var(--color-darker-lilac);
   }

@@ -1,0 +1,26 @@
+@media (min-width: 1000px) and (max-width: 1500px) {
+    .options {
+        width: 60%;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 999px){
+    .options {
+        width: 80%;
+    }
+}
+
+
+@media (min-width: 500px) and (max-width: 699px) {
+    .options {
+        width: 90%;
+    }
+
+  }
+
+  @media (min-width: 300) and (max-width: 499px) {
+    .options {
+        width: 100%;
+        gap: 0.5rem;
+    }
+  }

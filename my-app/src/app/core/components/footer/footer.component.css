@@ -1,35 +1,29 @@
-*{
-    font-family: open-sans;
-    font-size: 15px;
-  }
+
+:host{
+    height: 100%;
+}
 
 .footer {
-    position: absolute;
-    left: 0;
-    right: 0; 
-    background-color: bisque;
+    background-color: var(--color-crean);
+    height: inherit;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    font-size: 2.2vh;
 }
 
-.left{
-    margin-left: 20%;
-}
+.left p {
+    margin-top: 1rem;
+  }
+
 
 .vertical-line{
     border-left: 4px solid darkslateblue;
-    height: 80%;
-    position: absolute;
-    left: 50%;
-}
-
-.right{
-    margin-left: 40%;
+    height: 6rem;
 
 }
 
 .autentia{
-    width: 40%;
-    margin-top: 3%;
+    width: 13vh;
     height: auto;
 }

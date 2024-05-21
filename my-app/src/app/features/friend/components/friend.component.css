@@ -1,24 +1,23 @@
-*{
-	font-family: open-sans;
-	font-size: 16px;
-  }
-
-body {
-	margin: 0;
+:host{
+    height: 70%;
+    width: 40%;
 }
 
+
 .container {
+	height: inherit;
+    width: inherit;
 	align-items: center;
-    padding-top: 3%;
-	margin-left: 29%;
-	margin-bottom: 2%;
+    justify-content: center;
+	margin: auto;
+	margin-top: 2vh;;
 }
 
 table {
-	width: 600px;
+	width: 80vh;
 	border-collapse: collapse;
 	overflow: hidden;
-	box-shadow: 0 0 20px darkgray;
+	box-shadow: 0 0 20px var(--color-dark-gray);
 
 }
 
@@ -28,27 +27,37 @@ th, td{
 }
 
 th{
-    background-color: darkslateblue;
-	color: white;
+    background-color: var(--color-dark-blue);
+	color: var(--color-white);
     letter-spacing: 10px;
 }
 
 td {
-	background-color: white;
-	color: darkslateblue;
+	background-color: var(--color-white);
+	color: var(--color-dark-blue);
 }
 
 .bottom {
+	width: 78vh;
+	margin-top: 1rem;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
   }
 
+.left, .right{
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
 .setVisibilityTrue {
-	width: 30px;
-	height: 30px;
+	width: 4vh;
+	height: 4vh;
 	border-radius: 50%;
-	background-color: darkslateblue;
-	color: white;
+	background-color: var(--color-dark-blue);
+	color: var(--color-white);
 	font-size: 20px;
 	border: none;
 	cursor: pointer;
@@ -56,28 +65,21 @@ td {
   }
   
   .setVisibilityTrue:hover {
-	background-color: darkgray;
+	background-color: var(--color-dark-gray);
   }
 
-  p,
-  .add{
-	margin-left: 1%;
-  }
-
-  input{
-	margin-left: 22%;
-  }
 
   .add{
 	text-align: center;
-	color: darkslateblue;
-	background: #dbcdf0;
-	box-shadow: 0 0 20px lightgray;
+	color: var(--color-dark-blue);
+	background: var(--color-light-lilac);
+	box-shadow: 0 0 20px var(--color-light-gray);
 	border-radius: 0.25em;
 	border: 0;
-	padding: 0.5%;
+	padding: 3%;
   }
   
   .add:hover {
-	  background-color: #c8afed;
+	  background-color: var(--color-darker-lilac);;
 	}
+

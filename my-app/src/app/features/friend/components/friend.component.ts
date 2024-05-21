@@ -57,10 +57,15 @@ export class FriendComponent implements OnInit {
     .subscribe(
       (response) => {
           console.log('Friend added successfully!', response);
+
+          //Updating the friend's list.
+          this.showFriendsService.getAllFriends()
+          .subscribe(friends => this.friends = friends);
+
+          this.inputName = "";
         }, 
     )
 
-    this.showFriendsService.getAllFriends()
-    .subscribe(friends => this.friends = friends);
+    
   }
 }

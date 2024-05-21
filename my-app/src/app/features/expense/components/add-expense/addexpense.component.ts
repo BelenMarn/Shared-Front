@@ -45,7 +45,7 @@ export class AddExpenseComponent implements OnInit {
     if (!isNaN(parsedValue)) {
       this.selectedFriendId = parsedValue;
     } else {
-      console.error('Invalid friend ID selected');
+      console.error('Invalid ID selected');
     }
   }
 
@@ -75,7 +75,7 @@ export class AddExpenseComponent implements OnInit {
     this.expenseService.addExpense(this.selectedFriendId!, expense)
       .subscribe(
         (response) => {
-            console.log('Expense added successfully!', response);
+            console.log('Expense added successfully.', response);
           },
       )
   }

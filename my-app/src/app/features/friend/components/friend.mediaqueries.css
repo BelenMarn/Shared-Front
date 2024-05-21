@@ -1,0 +1,60 @@
+@media (min-width: 1000px) and (max-width: 1500px) {
+    .container{
+        width: 40%;
+    }
+
+    table{
+        width: 80vh;
+    }
+
+    .bottom{
+        width: 78vh;
+    }
+
+}
+
+@media (min-width: 700px) and (max-width: 999px){
+    .container{
+        width: 50%;
+    }
+
+    table{
+        width: 70vh;
+    }
+
+    .bottom{
+        width: 68vh;
+    }
+
+}
+
+
+@media (min-width: 500px) and (max-width: 699px) {
+    .container{
+        width: 60%;
+    }
+
+    table{
+        width: 60vh;
+    }
+
+    .bottom{
+        width: 58vh;
+    }
+
+}
+
+  @media (min-width: 300) and (max-width: 499px) {
+    .container{
+        width: 60%;
+    }
+
+    table{
+        width: 40vh;
+    }
+
+    .bottom{
+        width: 38vh;
+    }
+
+}
