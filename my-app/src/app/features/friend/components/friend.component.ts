@@ -5,6 +5,11 @@ import { CommonModule } from '@angular/common';
 import { AddFriendService } from '../services/add-friend/add-friend.service';
 import { FormsModule } from '@angular/forms';
 import { FriendRequest } from '../model/friend-request';
+import { UpdateFriendService } from '../services/update-friend/update-friend.service';
+import { DeleteFriendService } from '../services/delete-friend/delete-friend.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DeleteConfirmationDialogComponent } from './delete-friend/delete-friend.component';
+import { UpdateFriendDialogComponent } from './update-friend/update-friend.component';
 
 @Component({
   selector: 'app-friend',
@@ -15,13 +20,21 @@ import { FriendRequest } from '../model/friend-request';
 })
 export class FriendComponent implements OnInit {
   friends: FriendResponse[] = [];
+
   inputName: string = '';
   showInputName: boolean = false;
   showInputAdd: boolean = false;
 
+  name:string = '';
+
   constructor(
     private showFriendsService: ShowFriendsService,
-    private addFriendService: AddFriendService
+    private addFriendService: AddFriendService,
+    private updateFriendService: UpdateFriendService,
+    private deleteFriendService: DeleteFriendService,
+    private dialog: MatDialog
+
+
   ) { }
 
   ngOnInit(): void {
@@ -65,7 +78,48 @@ export class FriendComponent implements OnInit {
           this.inputName = "";
         }, 
     )
-
-    
+  
   }
-}
+
+  deleteConfirmation(friend: FriendResponse) {
+    const dialogRef = this.dialog.open(DeleteConfirmationDialogComponent, {
+      data: { friend: friend }
+    });
+
+    dialogRef.afterClosed().subscribe((result: any) => {
+      if (result === true) {
+        this.deleteFriendService.deleteFriend(friend.idFriend)
+          .subscribe(
+              (response) => {
+
+              window.alert('Amigo eliminado');
+
+              //Updating the friend's list.
+              this.showFriendsService.getAllFriends()
+              .subscribe(friends => this.friends = friends);
+            });
+        }
+      });
+  }
+
+  openUpdateDialog(friend: FriendResponse): void {
+    const dialogRef = this.dialog.open(UpdateFriendDialogComponent, {
+      data: { friend }
+    });
+  
+    dialogRef.afterClosed().subscribe((updatedFriend: FriendResponse | undefined) => {
+      if (updatedFriend) {
+        this.updateFriendService.updateFriend(updatedFriend)
+          .subscribe(
+              (response) => {
+
+              window.alert('Amigo eliminado');
+              
+              //Updating the friend's list.
+              this.showFriendsService.getAllFriends()
+              .subscribe(friends => this.friends = friends);
+            });
+        }
+      });
+    }
+  }

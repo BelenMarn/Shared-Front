@@ -3,18 +3,28 @@
   </head>
 
 <div class="container">
+
 	<table>
 		<thead>
-			<tr>
-				<th>MIEMBROS</th>
-			</tr>
+		  <tr>
+			<th>Miembros</th>
+			<th>Acciones</th>
+		  </tr>
 		</thead>
 		<tbody>
-			<tr *ngFor="let friend of friends">
-				<td>{{ friend.name }}</td>
-			</tr>
+		  <tr *ngFor="let friend of friends">
+			<td>{{ friend.name }}</td>
+			<td>
+			  <button class="delete-icon" (click)="deleteConfirmation(friend)">
+				<i class="material-icons">Borrar</i>
+			  </button>
+			  <button class="update-icon" (click)="openUpdateDialog(friend)">
+				<i class="material-icons">Modificar</i>
+			  </button>
+			  </td>
+		  </tr>
 		</tbody>
-	</table>
+	  </table>
 
 	<div class="bottom">
 		<div class="left">

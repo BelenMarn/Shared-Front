@@ -1,0 +1,41 @@
+.update-friend {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+    box-shadow: 0 0 20px var(--color-dark-gray);
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px; 
+    max-width: 80%;
+    min-width: 250px;
+  }
+  
+  .update-friend.mat-dialog-container {
+    position: static; 
+  }
+  
+  .mat-dialog-content {
+    max-height: 300px; 
+    overflow-y: auto;
+  }
+
+  .mat-dialog-content {
+    text-align: center;
+  }
+  
+  .actions {
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: 20px;
+  }
+  
+  .mat-button {
+    margin: 0 5px;
+  }

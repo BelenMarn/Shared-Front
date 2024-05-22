@@ -21,7 +21,7 @@ select {
     background-color: var(--color-dark-blue);
     border-radius: 0.25em;
     box-shadow: 0 0 20px var(--color-dark-gray);
-    cursor: pointer;s
+    cursor: pointer;
 }
 
 .data{

@@ -3,6 +3,8 @@ import { FriendComponent } from './features/friend/components/friend.component';
 import { AddExpenseComponent } from './features/expense/components/add-expense/addexpense.component'; 
 import { BalanceComponent } from './features/balance/components/balance.component'; 
 import { ViewexpenseComponent } from './features/expense/components/view-expense/viewexpense.component';
+import { UpdateFriendDialogComponent } from './features/friend/components/update-friend/update-friend.component';
+import { DeleteConfirmationDialogComponent } from './features/friend/components/delete-friend/delete-friend.component';
 
  export const routeConfig: Routes = [
     {
@@ -24,9 +26,15 @@ import { ViewexpenseComponent } from './features/expense/components/view-expense
 
     },
     {
-        path: 'balance',
-        component: BalanceComponent,
-        title: 'Balance page'
+        path: 'app-update-friend',
+        component: UpdateFriendDialogComponent,
+        title: 'Update friend page'
+
+    },
+    {
+        path: 'app-delete-friend',
+        component: DeleteConfirmationDialogComponent,
+        title: 'Delete friend page'
 
     }
 ]

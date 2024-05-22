@@ -83,3 +83,32 @@ td {
 	  background-color: var(--color-darker-lilac);;
 	}
 
+
+
+
+	tbody tr button {
+		background-color: transparent; /* Removes default button background */
+		border: none; /* Removes default button border */
+		cursor: pointer; /* Indicates clickable element */
+		padding: 5px; /* Add some padding around the icon */
+		transition: all 0.3s ease; /* Enables smooth hover effects */
+	  }
+	  
+	  /* Style delete icon button */
+	  tbody tr .delete-icon {
+		color: var(--color-red); /* Red color for delete icon */
+	  }
+	  
+	  tbody tr .delete-icon:hover {
+		color: var(--color-dark-red); /* Darker red on hover */
+	  }
+	  
+	  /* Style edit icon button */
+	  tbody tr .edit-icon {
+		color: var(--color-blue); /* Blue color for edit icon */
+	  }
+	  
+	  tbody tr .edit-icon:hover {
+		color: var(--color-dark-blue); /* Darker blue on hover */
+	  }
+
