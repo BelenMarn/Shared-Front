@@ -10,7 +10,7 @@ export class DeleteFriendService {
   constructor(private http: HttpClient) {}
 
   deleteFriend(friendId: number): Observable<any> {
-    const url = '/rest/expense/friend/' + friendId;
+    const url = '/rest/friend/' + friendId;
     return this.http.delete<any>(url);
   }
 }

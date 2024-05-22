@@ -11,7 +11,7 @@ export class UpdateFriendService {
   constructor(private http: HttpClient) { }
 
   updateFriend(friend: FriendResponse): Observable<any> {
-    const url = '/rest/expense/friend/' + friend.idFriend;
+    const url = '/rest/friend/' + friend.idFriend;
     return this.http.put<any>(url, friend.name);
   }
 }
