@@ -1,1 +1,25 @@
-<p>viewexpense works!</p>
+<div class="container">
+
+	<table>
+		<thead>
+			<tr>
+			  <th colspan="5">Gastos</th> </tr>
+		  </thead>
+		<tbody>
+		  <tr *ngFor="let expense of expenses">
+
+			<td>{{ expense.expenseDate }}</td>
+            <td>{{ expense.nameFriend }}</td>
+            <td >{{ expense.description }}</td>
+            <td>{{ expense.amount }} €</td>
+
+			<td>
+				<button class="delete-icon" (click)="deleteConfirmation(expense)">
+					<img src="./assets/delete.ico">
+				</button>
+			  </td>
+		  </tr>
+          
+		</tbody>
+	  </table>
+</div>

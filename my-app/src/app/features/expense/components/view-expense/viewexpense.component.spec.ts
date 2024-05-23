@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewexpenseComponent } from './viewexpense.component';
+import { ShowExpenseComponent } from './viewexpense.component';
 
-describe('ViewexpenseComponent', () => {
-  let component: ViewexpenseComponent;
-  let fixture: ComponentFixture<ViewexpenseComponent>;
+describe('ShowExpenseComponent', () => {
+  let component: ShowExpenseComponent;
+  let fixture: ComponentFixture<ShowExpenseComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ViewexpenseComponent]
+      imports: [ShowExpenseComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ViewexpenseComponent);
+    fixture = TestBed.createComponent(ShowExpenseComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

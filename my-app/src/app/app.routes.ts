@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { FriendComponent } from './features/friend/components/friend.component'; 
-import { AddExpenseComponent } from './features/expense/components/add-expense/addexpense.component'; 
-import { BalanceComponent } from './features/balance/components/balance.component'; 
-import { ViewexpenseComponent } from './features/expense/components/view-expense/viewexpense.component';
-import { UpdateFriendDialogComponent } from './features/friend/components/update-friend/update-friend.component';
+import { FriendComponent } from './features/friend/components/friend.component';
+import { AddExpenseComponent } from './features/expense/components/add-expense/addexpense.component';
+import { DeleteConfirmationExpenseDialogComponent } from './features/expense/components/delete-expense/deleteexpense.component';
+import { ViewExpenseComponent } from './features/expense/components/view-expense/viewexpense.component';
 import { DeleteConfirmationDialogComponent } from './features/friend/components/delete-friend/delete-friend.component';
+import { UpdateFriendDialogComponent } from './features/friend/components/update-friend/update-friend.component';
 
  export const routeConfig: Routes = [
     {
@@ -21,8 +21,8 @@ import { DeleteConfirmationDialogComponent } from './features/friend/components/
     },
     {
         path: 'viewexpense',
-        component: ViewexpenseComponent,
-        title: 'View Expense page'
+        component: ViewExpenseComponent,
+        title: 'Expense page'
 
     },
     {
@@ -35,6 +35,12 @@ import { DeleteConfirmationDialogComponent } from './features/friend/components/
         path: 'app-delete-friend',
         component: DeleteConfirmationDialogComponent,
         title: 'Delete friend page'
+
+    },
+    {
+        path: 'app-delete-expense',
+        component: DeleteConfirmationExpenseDialogComponent,
+        title: 'Delete expense page'
 
     }
 ]
