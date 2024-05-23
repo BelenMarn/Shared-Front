@@ -3,18 +3,12 @@
     <mat-dialog-content>
       <h2>Actualizar amigo</h2>
 
-      <mat-form-field>
-
-        <mat-label>Nuevo nombre</mat-label>
-        <input matInput [(ngModel)]="name" />
-
-      </mat-form-field>
-    
+      <label>Nuevo nombre</label>
+      <input type="text" [(ngModel)]="name" />
+  
       <div class="actions">
-
-        <button mat-button (click)="dialogRef.close()">Cancelar</button>
-        <button mat-button color="primary" (click)="dialogRef.close(updatedFriend)">Aceptar</button>
-
+        <button mat-button (click)="cancel()">Cancelar</button>
+        <button mat-button color="primary" (click)="update()">Aceptar</button>
       </div>
 
     </mat-dialog-content>

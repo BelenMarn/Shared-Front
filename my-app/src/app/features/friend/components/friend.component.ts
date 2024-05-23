@@ -12,11 +12,11 @@ import { DeleteConfirmationDialogComponent } from './delete-friend/delete-friend
 import { UpdateFriendDialogComponent } from './update-friend/update-friend.component';
 
 @Component({
-  selector: 'app-friend',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './friend.component.html',
-  styleUrl: './friend.component.css'
+    selector: 'app-friend',
+    standalone: true,
+    templateUrl: './friend.component.html',
+    styleUrl: './friend.component.css',
+    imports: [CommonModule, FormsModule, UpdateFriendDialogComponent]
 })
 export class FriendComponent implements OnInit {
   friends: FriendResponse[] = [];
@@ -26,6 +26,10 @@ export class FriendComponent implements OnInit {
   showInputAdd: boolean = false;
 
   name:string = '';
+
+  friendToEdit: FriendResponse = {idFriend: 0, name: ""};
+
+  showDialog = false;
 
   constructor(
     private showFriendsService: ShowFriendsService,
@@ -102,24 +106,21 @@ export class FriendComponent implements OnInit {
       });
   }
 
-  openUpdateDialog(friend: FriendResponse): void {
-    const dialogRef = this.dialog.open(UpdateFriendDialogComponent, {
-      data: { friend }
-    });
-  
-    dialogRef.afterClosed().subscribe((updatedFriend: FriendResponse | undefined) => {
-      if (updatedFriend) {
-        this.updateFriendService.updateFriend(updatedFriend)
-          .subscribe(
-              (response) => {
+  toggleShowDialog(){
+    this.showDialog = !this.showDialog;
+  }
 
-              window.alert('Amigo eliminado');
-              
-              //Updating the friend's list.
-              this.showFriendsService.getAllFriends()
-              .subscribe(friends => this.friends = friends);
-            });
-        }
-      });
+  openUpdateDialog(friend: FriendResponse): void {
+      this.friendToEdit = friend;
+      this.toggleShowDialog();
+    }
+
+    update(name: string){
+      this.updateFriendService.updateFriend({idFriend: this.friendToEdit.idFriend, name: name}).subscribe(()=> {
+        this.toggleShowDialog();
+
+        this.showFriendsService.getAllFriends()
+        .subscribe(friends => this.friends = friends);
+      }) 
     }
   }

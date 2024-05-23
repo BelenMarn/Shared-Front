@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Inject, Output, EventEmitter, Input } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { FriendResponse } from '../../model/friend-response';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -16,29 +16,22 @@ import { CommonModule } from '@angular/common';
 })
 
 export class UpdateFriendDialogComponent implements OnInit {
-  updatedFriend?: FriendResponse;
   name: string = '';
-  @Output() updateFriend = new EventEmitter<FriendResponse>();
+  @Output() updateEvent: EventEmitter<any> = new EventEmitter();
+  @Output() cancelEvent: EventEmitter<any> = new EventEmitter();
+  @Input() basedName: string = "";
   
-  constructor(
-    @Inject(MatDialogRef<UpdateFriendDialogComponent>) public dialogRef: MatDialogRef<UpdateFriendDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: { friend: FriendResponse }
-  ) {}
 
   ngOnInit(): void {
-    if (this.data) {
-      this.name = this.data.friend.name;
-    }
-  }
-
-  closeDialog(): void {
-    this.dialogRef.close();
+    this.name = this.basedName;
   }
 
   update(): void {
-    if (this.updatedFriend) {
-      this.updateFriend.emit(this.updatedFriend);
-      this.dialogRef.close();
-    }
+      this.updateEvent.emit(this.name);
+
+  }
+
+  cancel(): void{
+    this.cancelEvent.emit();
   }
 }

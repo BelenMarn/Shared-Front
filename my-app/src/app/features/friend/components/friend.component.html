@@ -15,12 +15,12 @@
 		  <tr *ngFor="let friend of friends">
 			<td>{{ friend.name }}</td>
 			<td>
-			  <button class="delete-icon" (click)="deleteConfirmation(friend)">
-				<i class="material-icons">Borrar</i>
-			  </button>
-			  <button class="update-icon" (click)="openUpdateDialog(friend)">
-				<i class="material-icons">Modificar</i>
-			  </button>
+				<button class="delete-icon" (click)="deleteConfirmation(friend)">
+					<img src="./assets/delete.ico">
+				</button>
+				  <button class="update-icon" (click)="openUpdateDialog(friend)">
+					<img src="./assets/update.ico">
+				</button>
 			  </td>
 		  </tr>
 		</tbody>
@@ -38,3 +38,9 @@
 		</div>
 	</div>
 </div>
+
+@if (this.showDialog) {
+	<app-update-friend (updateEvent)="update($event)" (cancelEvent)="toggleShowDialog()" [basedName]="this.friendToEdit.name"></app-update-friend>
+}
+
+
