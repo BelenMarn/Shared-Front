@@ -77,6 +77,10 @@ export class AddExpenseComponent implements OnInit {
         (response) => {
             console.log('Expense added successfully.', response);
           },
+
       )
+
+      this.description = '';
+      this.amount = 0;
   }
 }

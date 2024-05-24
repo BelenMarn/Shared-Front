@@ -1,0 +1,33 @@
+@media (min-width: 1000px) and (max-width: 1500px) {
+    .container{
+        width: 40%;
+    }
+
+    table{
+        width: 80vh;
+    }
+
+
+}
+
+@media (min-width: 700px) and (max-width: 999px){
+    .container{
+        width: 50%;
+    }
+
+    table{
+        width: 60vh;
+    }
+
+}
+
+@media (min-width: 500px) and (max-width: 699px){
+    .container{
+        width: 60%;
+    }
+
+    table{
+        width: 50vh;
+    }
+
+}

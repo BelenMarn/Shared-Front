@@ -17,7 +17,6 @@ import { FormsModule } from '@angular/forms';
 
 export class ViewExpenseComponent implements OnInit {
   expenses: ExpenseResponse[] = [];
-columns: any;
 
 
   constructor(
@@ -47,8 +46,6 @@ columns: any;
         this.deleteExpenseService.deleteExpense(expense.idExpense)
           .subscribe(
               (response) => {
-
-              window.alert('Amigo eliminado');
 
               //Updating the friend's list.
               this.viewExpenseService.getExpenses()

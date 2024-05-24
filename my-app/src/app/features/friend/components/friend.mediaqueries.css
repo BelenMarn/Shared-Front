@@ -46,11 +46,11 @@
 
   @media (min-width: 300) and (max-width: 499px) {
     .container{
-        width: 60%;
+        width: 70%;
     }
 
     table{
-        width: 40vh;
+        width: 30vh;
     }
 
     .bottom{

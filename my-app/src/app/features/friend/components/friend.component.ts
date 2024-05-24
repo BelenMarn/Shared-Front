@@ -61,7 +61,7 @@ export class FriendComponent implements OnInit {
     }
 
     if (this.inputName.trim().length === 0) {
-      console.error('Please enter a friend.');
+      window.alert('Selecciona un amigo.');
       return;
     }
 
@@ -95,8 +95,6 @@ export class FriendComponent implements OnInit {
         this.deleteFriendService.deleteFriend(friend.idFriend)
           .subscribe(
               (response) => {
-
-              window.alert('Amigo eliminado');
 
               //Updating the friend's list.
               this.showFriendsService.getAllFriends()

@@ -1,0 +1,45 @@
+:host{
+    height: 70%;
+    width: 40%;
+}
+
+
+.container {
+	height: inherit;
+    width: inherit;
+	align-items: center;
+    justify-content: center;
+	margin: auto;
+	margin-top: 2vh;;
+}
+
+table {
+	width: 80vh;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px var(--color-dark-gray);
+
+}
+
+th, td{
+	padding: 15px;
+    text-align: center;
+}
+
+th{
+    background-color: var(--color-dark-blue);
+	color: var(--color-white);
+    letter-spacing: 10px;
+}
+
+td {
+	background-color: var(--color-white);
+	color: var(--color-dark-blue);
+}
+
+tbody tr {
+	background-color: transparent;
+	border: none; 
+	cursor: pointer;
+	padding: 5px;
+}

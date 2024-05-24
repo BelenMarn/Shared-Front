@@ -5,6 +5,7 @@ import { DeleteConfirmationExpenseDialogComponent } from './features/expense/com
 import { ViewExpenseComponent } from './features/expense/components/view-expense/viewexpense.component';
 import { DeleteConfirmationDialogComponent } from './features/friend/components/delete-friend/delete-friend.component';
 import { UpdateFriendDialogComponent } from './features/friend/components/update-friend/update-friend.component';
+import { BalanceComponent } from './features/balance/components/balance.component';
 
  export const routeConfig: Routes = [
     {
@@ -41,6 +42,12 @@ import { UpdateFriendDialogComponent } from './features/friend/components/update
         path: 'app-delete-expense',
         component: DeleteConfirmationExpenseDialogComponent,
         title: 'Delete expense page'
+
+    },
+    {
+        path: 'balance',
+        component: BalanceComponent,
+        title: 'Balance page'
 
     }
 ]
