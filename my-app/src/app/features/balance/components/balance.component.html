@@ -1,22 +1,22 @@
 <head>
-	<link rel="stylesheet" href="balance.mediaqueries.css">
-  </head>
+  <link rel="stylesheet" href="balance.mediaqueries.css" />
+</head>
 
 <div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">Balance</th>
+      </tr>
+    </thead>
 
-	<table>
-
-		<thead>
-			<tr>
-			  <th colspan="2">Balance</th> </tr>
-		  </thead>
-
-		<tbody>
-		  <tr *ngFor="let balance of balances">
-			<td>{{ balance.name }}</td>
-            <td>{{ balance.balance }} €</td>
-		  </tr>
-		</tbody>
-        
-	  </table>
+    <tbody>
+      <tr *ngFor="let balance of balances">
+        <td>{{ balance.name }}</td>
+        <td [style.color]="getColor(balance.balance)">
+          {{ balance.balance }} €
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

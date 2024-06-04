@@ -79,6 +79,10 @@ td {
 	padding: 3%;
 }
 
+input{
+	padding: 1.5%;
+}
+
 .add:hover {
 	background-color: var(--color-darker-lilac);;
 }

@@ -1,5 +1,5 @@
 .update-friend {
-  position: absolute; 
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -17,34 +17,19 @@
   max-width: 80%;
   min-width: 250px;
 }
-  
-  .update-friend.mat-dialog-container {
-    position: static; 
-  }
-  
-  .mat-dialog-content {
-    max-height: 300px; 
-    overflow-y: auto;
-  }
 
-  .mat-dialog-content {
-    text-align: center;
-  }
-  
-  .actions {
-    display: flex; 
-    justify-content: space-between; 
-    margin-top: 25px;
-  }
-  
-  .mat-button {
-    margin: 0 5px;
-  }
+/* .update-friend.mat-dialog-container {
+  position: static;
+} */
 
-  h2{
-    margin-bottom: 10%;
-  }
-  
-  p {  margin-top: 10%;
-  }
-  
+.mat-dialog-content {
+  max-height: 300px;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}

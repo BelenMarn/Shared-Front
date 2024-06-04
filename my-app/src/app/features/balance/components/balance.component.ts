@@ -28,4 +28,13 @@ export class BalanceComponent implements OnInit {
       .subscribe(balances => this.balances = balances);
   }
 
+  getColor(balance: number): string {
+    if (balance > 0) {
+      return 'green';
+    } else if (balance === 0) {
+      return 'blue';
+    } else {
+      return 'red';
+    }
+  }
 }

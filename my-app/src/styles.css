@@ -1,28 +1,27 @@
-:root{/*Se suele usar para variables CSS*/
-    --color-dark-blue: darkslateblue;
-    --color-white: white;
-    --color-crean: bisque;
-    --color-dark-gray: darkgray;
-    --color-light-gray: lightgray;
-    --color-light-lilac: #dbcdf0;
-    --color-darker-lilac: #c8afed;
+:root {
+  /*Se suele usar para variables CSS*/
+  --color-dark-blue: darkslateblue;
+  --color-white: white;
+  --color-crean: bisque;
+  --color-dark-gray: darkgray;
+  --color-light-gray: lightgray;
+  --color-light-lilac: #dbcdf0;
+  --color-darker-lilac: #c8afed;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /*Cuenta el width con el padding*/
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*Cuenta el width con el padding*/
+}
 
-  html{
-    font-size: 100%;
-  }
+html {
+  font-size: 100%;
+}
 
-  body{
-    height: 100vh;
-    font-size: 1rem;/*1rem es relativo al root (html)
+body {
+  height: 100vh;
+  font-size: 1rem; /*1rem es relativo al root (html)
                     1em es relativo a su padre*/
-    font-family: open-sans;
-  }
-
-
+  font-family: open-sans;
+}

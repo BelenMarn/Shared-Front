@@ -6,6 +6,8 @@ import { DeleteExpenseService } from '../../services/delete-expense/delete-expen
 import { DeleteConfirmationExpenseDialogComponent } from '../delete-expense/deleteexpense.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import moment from 'moment';
+import 'moment/locale/es';
 
 @Component({
   selector: 'viewexpense',
@@ -17,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 
 export class ViewExpenseComponent implements OnInit {
   expenses: ExpenseResponse[] = [];
+  moment = moment;
 
 
   constructor(
